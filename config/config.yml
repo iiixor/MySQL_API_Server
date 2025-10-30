@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  read_timeout: 35s
+  write_timeout: 35s
+  shutdown_timeout: 5s
+
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  password: 12345
+  max_open_conns: 25
+  max_idle_conns: 10
+  conn_max_lifetime: 5m
+
+executor:
+  query_timeout: 30s
+  db_prefix: "student_db_"
+
+security:
+  rate_limit_per_second: 10
+  rate_limit_burst: 20
+
+logging:
+  level: info
+  format: json
